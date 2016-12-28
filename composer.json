@@ -1,8 +1,8 @@
 {
-  "name": "bean-project/location-bundle",
+  "name": "bean-project/core-bundle",
   "type": "symfony-bundle",
-  "description": "Symfony BeanLocationBundle",
-  "keywords": ["location manager","geolocation", "bundle", "bean"],
+  "description": "Symfony BeanCoreBundle",
+  "keywords": ["bundle", "bean"],
   "license": "MIT",
   "authors": [
     {
@@ -24,14 +24,12 @@
     "liip/imagine-bundle": "~0.9"
   },
   "conflict": {
-    "jms/serializer": "<0.13",
-    "sonata-project/seo-bundle": "<1.1.5",
-    "sonata-project/block-bundle": "<2.2.8"
+    "jms/serializer": "<0.13"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload": {
-    "psr-4": { "Bean\\Bundle\\LocationBundle\\": "" }
+    "psr-4": { "Bean\\Bundle\\CoreBundle\\": "" }
   },
   "extra": {
     "branch-alias": {
