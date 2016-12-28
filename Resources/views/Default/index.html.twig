@@ -1,0 +1,16 @@
+		<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+		<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+<script>
+alert(Routing.generate('bean_core_homepage'));
+</script>
+Hello World! Bean Core
+{{ dump(organisation(3)) }}
+{% if organisation(3).locations.0 is defined %}
+  {{ organisation(3).locations[0] }}
+{% else %}
+  
+{% endif %}
+
+{% if organisation(3).logo is not empty %}
+	{% thumbnail organisation(3).logo, 'small' %}
+{% endif %}

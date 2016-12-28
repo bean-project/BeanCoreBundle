@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="bean_core.string" class="Bean\Bundle\CoreBundle\Service\StringService">
+            <!-- <argument type="service" id="service_id" /> 
+            <argument>plain_value</argument>
+            <argument>%parameter_name%</argument>
+			-->
+        </service>
+        <service id="bean_core.geoip" class="Bean\Bundle\CoreBundle\Service\GeoipService" >
+			<argument type="service" id="service_container" />
+        </service>		
+		<service id="bean_core.date_time" class="Bean\Bundle\CoreBundle\Service\DateTimeService">
+			<argument type="service" id="service_container" />
+        </service>
+
+        <service id="bean_core.template" class="Bean\Bundle\CoreBundle\Service\TemplateService">
+            <argument type="service" id="service_container" />
+        </service>
+        <service id="bean_core.message" class="Bean\Bundle\CoreBundle\Service\MessageService">
+            <argument type="service" id="service_container" />
+        </service>
+    </services>
+
+</container>
